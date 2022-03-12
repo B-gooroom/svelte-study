@@ -2,6 +2,8 @@
   import Header from "./components/Header.svelte";
   import Nav from "./components/Nav.svelte";
   import Footer from "./components/Footer.svelte";
+  import Router from "svelte-spa-router";
+  import routes from "./routes";
 </script>
 
 <div id="app">
@@ -13,10 +15,7 @@
     <Nav />
     <hr />
     <section class="contents">
-      <div>
-        <h3>Members</h3>
-        <p>Contents</p>
-      </div>
+      <Router {routes} />
     </section>
     <hr />
   </div>
