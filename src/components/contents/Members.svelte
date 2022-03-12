@@ -1,6 +1,7 @@
 <script>
   import membersStore from "../../store/membersStore";
   const { members, member } = membersStore;
+  membersStore.membersRead();
   console.log($members, $member);
 </script>
 
@@ -18,14 +19,16 @@
         </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>홍길동</td>
-          <td>20</td>
-          <td>
-            <button>Update</button>
-            <button>Delete</button>
-          </td>
-        </tr>
+        {#each $members as member, index}
+          <tr>
+            <td>{member.name}</td>
+            <td>{member.age}</td>
+            <td>
+              <button>Update</button>
+              <button>Delete</button>
+            </td>
+          </tr>
+        {/each}
       </tbody>
     </table>
   </div>
