@@ -1,4 +1,39 @@
+<script>
+  import membersStore from "../../store/membersStore";
+  const { members, member } = membersStore;
+  console.log($members, $member);
+</script>
+
 <div>
   <h3>Members</h3>
-  <p>Contents 2</p>
+  <hr class="d-block" />
+  <div>
+    <h4>Read</h4>
+    <table>
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Age</th>
+          <th>Modify</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>홍길동</td>
+          <td>20</td>
+          <td>
+            <button>Update</button>
+            <button>Delete</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  <hr class="d-block" />
+  <div>
+    <h4>Create</h4>
+    <input type="text" placeholder="Name" />
+    <input type="text" placeholder="Age" />
+    <button>Create</button>
+  </div>
 </div>
