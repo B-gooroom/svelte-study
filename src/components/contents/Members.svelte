@@ -21,10 +21,24 @@
       <tbody>
         {#each $members as member, index}
           <tr>
-            <td>{member.name}</td>
-            <td>{member.age}</td>
+            <td
+              ><input
+                type="text"
+                placeholder="Name"
+                bind:value={member.name}
+              /></td
+            >
+            <td
+              ><input
+                type="text"
+                placeholder="Age"
+                bind:value={member.age}
+              /></td
+            >
             <td>
-              <button>Update</button>
+              <button on:click={() => membersStore.membersUpdate(index, member)}
+                >Update</button
+              >
               <button on:click={() => membersStore.membersDelete(index)}
                 >Delete</button
               >

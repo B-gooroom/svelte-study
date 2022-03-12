@@ -4,12 +4,13 @@ class MembersStore {
   members = writable([]);
   member = writable({
     name: '',
-    age: ''
+    age:  ''
   });
 
   membersCreate = (member) => {
     this.members.update(members => {
       members.push(member);
+      member.age = Number(member.age);
       console.log('Done membersCreate', members);
       return members;
     })
@@ -33,6 +34,15 @@ class MembersStore {
     this.members.update(members => {
       members.splice(index, 1);
       console.log('Done membersDelete', members);
+      return members;
+    })
+  };
+
+  membersUpdate = (index, member) => {
+    this.members.update(members => {
+      members[index] = member;
+      member.age = Number(member.age);
+      console.log('Done membersUpdate', members);
       return members;
     })
   };
