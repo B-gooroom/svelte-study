@@ -1,18 +1,16 @@
 <script>
+  import Header from "./components/Header.svelte";
+  import Nav from "./components/Nav.svelte";
+  import Footer from "./components/Footer.svelte";
 </script>
 
 <div id="app">
-  <header>
-    <h1>Svelte study</h1>
-  </header>
+  {#if 1 === 1}
+    <Header />
+  {/if}
   <hr />
   <div class="container">
-    <nav class="nav">
-      <ul>
-        <li><h2>Members</h2></li>
-        <li><h2>Search</h2></li>
-      </ul>
-    </nav>
+    <Nav />
     <hr />
     <section class="contents">
       <div>
@@ -22,5 +20,5 @@
     </section>
     <hr />
   </div>
-  <footer>Copyright</footer>
+  <Footer />
 </div>
