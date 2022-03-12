@@ -1,30 +1,26 @@
 <script>
-	export let name;
 </script>
 
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
-
-<style>
-	main {
-		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
-	}
-
-	h1 {
-		color: #ff3e00;
-		text-transform: uppercase;
-		font-size: 4em;
-		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
-	}
-</style>
+<div id="app">
+  <header>
+    <h1>Svelte study</h1>
+  </header>
+  <hr />
+  <div class="container">
+    <nav class="nav">
+      <ul>
+        <li><h2>Members</h2></li>
+        <li><h2>Search</h2></li>
+      </ul>
+    </nav>
+    <hr />
+    <section class="contents">
+      <div>
+        <h3>Members</h3>
+        <p>Contents</p>
+      </div>
+    </section>
+    <hr />
+  </div>
+  <footer>Copyright</footer>
+</div>
