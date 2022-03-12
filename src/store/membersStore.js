@@ -28,6 +28,14 @@ class MembersStore {
       return members;
     })
   };
+
+  membersDelete = (index) => {
+    this.members.update(members => {
+      members.splice(index, 1);
+      console.log('Done membersDelete', members);
+      return members;
+    })
+  };
 }
 
 export default new MembersStore();

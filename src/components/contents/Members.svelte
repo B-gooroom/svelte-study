@@ -25,7 +25,9 @@
             <td>{member.age}</td>
             <td>
               <button>Update</button>
-              <button>Delete</button>
+              <button on:click={() => membersStore.membersDelete(index)}
+                >Delete</button
+              >
             </td>
           </tr>
         {/each}
