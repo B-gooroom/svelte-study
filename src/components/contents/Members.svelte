@@ -32,8 +32,8 @@
   <hr class="d-block" />
   <div>
     <h4>Create</h4>
-    <input type="text" placeholder="Name" />
-    <input type="text" placeholder="Age" />
-    <button>Create</button>
+    <input type="text" placeholder="Name" bind:value={$member.name} />
+    <input type="text" placeholder="Age" bind:value={$member.age} />
+    <button on:click={() => membersStore.membersCreate($member)}>Create</button>
   </div>
 </div>
